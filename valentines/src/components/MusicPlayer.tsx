@@ -12,48 +12,50 @@ interface Track {
   cover: string;
 }
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const tracks: Track[] = [
   {
     id: 1,
     title: "Magnetic",
     artist: "ILLIT",
-    file: "/music/ILLIT (아일릿) Magnetic Official MV.mp3",
-    cover: "/music/covers/magnetic.jpg",
+    file: `${basePath}/music/ILLIT (아일릿) Magnetic Official MV.mp3`,
+    cover: `${basePath}/music/covers/magnetic.jpg`,
   },
   {
     id: 2,
     title: "John Wayne",
     artist: "Cigarettes After Sex",
-    file: "/music/John Wayne - Cigarettes After Sex.mp3",
-    cover: "/music/covers/john.jpg",
+    file: `${basePath}/music/John Wayne - Cigarettes After Sex.mp3`,
+    cover: `${basePath}/music/covers/john.jpg`,
   },
   {
     id: 3,
     title: "Love Shot",
     artist: "EXO",
-    file: "/music/Love Shot.mp3",
-    cover: "/music/covers/loveshot.jpg",
+    file: `${basePath}/music/Love Shot.mp3`,
+    cover: `${basePath}/music/covers/loveshot.jpg`,
   },
   {
     id: 4,
     title: "Please, Please, Please Let Me Get What I Want",
     artist: "The Smiths",
-    file: "/music/The Smiths - Please, Please, Please Let Me Get What I Want (Official Lyric Video).mp3",
-    cover: "/music/covers/please.jpg",
+    file: `${basePath}/music/The Smiths - Please, Please, Please Let Me Get What I Want (Official Lyric Video).mp3`,
+    cover: `${basePath}/music/covers/please.jpg`,
   },
   {
     id: 5,
     title: "Lovers Rock",
     artist: "TV Girl",
-    file: "/music/TV Girl - Lovers Rock.mp3",
-    cover: "/music/covers/lovers-rock.jpg",
+    file: `${basePath}/music/TV Girl - Lovers Rock.mp3`,
+    cover: `${basePath}/music/covers/lovers-rock.jpg`,
   },
   {
     id: 6,
     title: "ULTRA",
     artist: "Changbin (Stray Kids)",
-    file: "/music/Changbin ULTRA  [Stray Kids _ SKZ-PLAYER].mp3",
-    cover: "/music/covers/ultra.jpg",
+    file: `${basePath}/music/Changbin ULTRA  [Stray Kids _ SKZ-PLAYER].mp3`,
+    cover: `${basePath}/music/covers/ultra.jpg`,
   },
 ];
 

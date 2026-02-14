@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Fireworks from "@fireworks-js/react";
 import Image from "next/image";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const playfairDisplay = Playfair_Display({
   display: "swap",
   subsets: ["latin"],
@@ -26,7 +28,7 @@ function TypewriterText({
 
   // Initialize audio element
   useEffect(() => {
-    audioRef.current = new Audio('/freesound_community-typewriter-170428_1482-22815.mp3');
+    audioRef.current = new Audio(`${basePath}/freesound_community-typewriter-170428_1482-22815.mp3`);
     audioRef.current.loop = true;
     audioRef.current.volume = 0.3;
     
@@ -87,42 +89,42 @@ function TypewriterText({
 
 // 36 images
 const images = [
-  "/game-photos/1.avif",
-  "/game-photos/2.avif",
-  "/game-photos/3.avif",
-  "/game-photos/4.avif",
-  "/game-photos/5.avif",
-  "/game-photos/6.avif",
-  "/game-photos/7.avif",
-  "/game-photos/8.avif",
-  "/game-photos/9.avif",
-  "/game-photos/10.avif",
-  "/game-photos/11.avif",
-  "/game-photos/12.avif",
-  "/game-photos/13.avif",
-  "/game-photos/14.avif",
-  "/game-photos/15.avif",
-  "/game-photos/16.avif",
-  "/game-photos/17.avif",
-  "/game-photos/18.avif",
-  "/game-photos/19.avif",
-  "/game-photos/20.avif",
-  "/game-photos/21.avif",
-  "/game-photos/22.avif",
-  "/game-photos/23.avif",
-  "/game-photos/24.avif",
-  "/game-photos/25.avif",
-  "/game-photos/26.avif",
-  "/game-photos/27.avif",
-  "/game-photos/28.avif",
-  "/game-photos/29.avif",
-  "/game-photos/30.avif",
-  "/game-photos/31.avif",
-  "/game-photos/32.avif",
-  "/game-photos/33.avif",
-  "/game-photos/34.avif",
-  "/game-photos/35.avif",
-  "/game-photos/36.avif",
+  `${basePath}/game-photos/1.avif`,
+  `${basePath}/game-photos/2.avif`,
+  `${basePath}/game-photos/3.avif`,
+  `${basePath}/game-photos/4.avif`,
+  `${basePath}/game-photos/5.avif`,
+  `${basePath}/game-photos/6.avif`,
+  `${basePath}/game-photos/7.avif`,
+  `${basePath}/game-photos/8.avif`,
+  `${basePath}/game-photos/9.avif`,
+  `${basePath}/game-photos/10.avif`,
+  `${basePath}/game-photos/11.avif`,
+  `${basePath}/game-photos/12.avif`,
+  `${basePath}/game-photos/13.avif`,
+  `${basePath}/game-photos/14.avif`,
+  `${basePath}/game-photos/15.avif`,
+  `${basePath}/game-photos/16.avif`,
+  `${basePath}/game-photos/17.avif`,
+  `${basePath}/game-photos/18.avif`,
+  `${basePath}/game-photos/19.avif`,
+  `${basePath}/game-photos/20.avif`,
+  `${basePath}/game-photos/21.avif`,
+  `${basePath}/game-photos/22.avif`,
+  `${basePath}/game-photos/23.avif`,
+  `${basePath}/game-photos/24.avif`,
+  `${basePath}/game-photos/25.avif`,
+  `${basePath}/game-photos/26.avif`,
+  `${basePath}/game-photos/27.avif`,
+  `${basePath}/game-photos/28.avif`,
+  `${basePath}/game-photos/29.avif`,
+  `${basePath}/game-photos/30.avif`,
+  `${basePath}/game-photos/31.avif`,
+  `${basePath}/game-photos/32.avif`,
+  `${basePath}/game-photos/33.avif`,
+  `${basePath}/game-photos/34.avif`,
+  `${basePath}/game-photos/35.avif`,
+  `${basePath}/game-photos/36.avif`,
 ];
 
 export default function ValentinesProposal() {
@@ -241,7 +243,7 @@ export default function ValentinesProposal() {
               Will you be my Valentine?
             </h2>
             <Image
-              src="/silly.jpg"
+              src={`${basePath}/silly.jpg`}
               alt="Cute Cat"
               width={400}
               height={400}
@@ -335,7 +337,7 @@ From your boyfriend`}
               transition={{ delay: 1.5 }}
             >
               <Image
-                src="/hamster_jumping.gif"
+                src={`${basePath}/hamster_jumping.gif`}
                 alt="Hamster Feliz"
                 width={200}
                 height={200}
