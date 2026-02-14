@@ -4,26 +4,28 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
-// 18 images - Image component auto-adds basePath
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+// 18 images
 const images = [
-  "/game-photos/1.avif",
-  "/game-photos/2.avif",
-  "/game-photos/3.avif",
-  "/game-photos/4.avif",
-  "/game-photos/5.avif",
-  "/game-photos/6.avif",
-  "/game-photos/7.avif",
-  "/game-photos/8.avif",
-  "/game-photos/9.avif",
-  "/game-photos/10.avif",
-  "/game-photos/11.avif",
-  "/game-photos/12.avif",
-  "/game-photos/13.avif",
-  "/game-photos/14.avif",
-  "/game-photos/15.avif",
-  "/game-photos/16.avif",
-  "/game-photos/17.avif",
-  "/game-photos/18.avif",
+  `${basePath}/game-photos/1.avif`,
+  `${basePath}/game-photos/2.avif`,
+  `${basePath}/game-photos/3.avif`,
+  `${basePath}/game-photos/4.avif`,
+  `${basePath}/game-photos/5.avif`,
+  `${basePath}/game-photos/6.avif`,
+  `${basePath}/game-photos/7.avif`,
+  `${basePath}/game-photos/8.avif`,
+  `${basePath}/game-photos/9.avif`,
+  `${basePath}/game-photos/10.avif`,
+  `${basePath}/game-photos/11.avif`,
+  `${basePath}/game-photos/12.avif`,
+  `${basePath}/game-photos/13.avif`,
+  `${basePath}/game-photos/14.avif`,
+  `${basePath}/game-photos/15.avif`,
+  `${basePath}/game-photos/16.avif`,
+  `${basePath}/game-photos/17.avif`,
+  `${basePath}/game-photos/18.avif`,
 ];
 
 // Create 18 pairs of images (36 images in total)
