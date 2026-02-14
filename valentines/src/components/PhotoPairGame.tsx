@@ -101,15 +101,9 @@ export default function PhotoPairGame({
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="fixed inset-0 bg-black/70 flex flex-col items-center justify-center z-50 cursor-pointer"
+          className="fixed inset-0 flex flex-col items-center justify-center z-50 cursor-pointer"
           onClick={handleWinClick}
         >
-          <motion.p
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            className="text-4xl text-white font-semibold mb-4"
-          >
-          </motion.p>
         </motion.div>
       )}
 
