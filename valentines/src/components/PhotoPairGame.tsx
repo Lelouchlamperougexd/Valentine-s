@@ -96,8 +96,7 @@ export default function PhotoPairGame({
   };
 
   return (
-    <div className="relative">
-      {/* Win overlay */}
+    <div className="relative">      {/* Win overlay */}
       {gameWon && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -110,15 +109,6 @@ export default function PhotoPairGame({
             animate={{ scale: 1, opacity: 1 }}
             className="text-4xl text-white font-semibold mb-4"
           >
-            🎉 You did it! 🎉
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="text-xl text-pink-300"
-          >
-            Click {2 - clickCount} more time{2 - clickCount !== 1 ? 's' : ''} to continue...
           </motion.p>
         </motion.div>
       )}
